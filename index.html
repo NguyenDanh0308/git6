@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .header{
+            background-color: #52705E;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page{
+            max-width: 1440px;
+            margin:0 auto;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 174px 68px 64px 68px;
+            gap: 100px;
+        }
+        .noidung{
+            width: 552px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            color: #ffffff;
+            gap:16px;
+        }
+        .anh{
+            width: 379px;
+            height: 512px;
+            object-fit: cover;
+        }
+        .anh img{
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        .button{
+            display: flex;
+            gap: 16px;
+            
+        }
+        .noidung > p:first-child{
+            font-size: 11px;
+            letter-spacing: 2px;
+            line-height: 2;                                  
+        }
+        .noidung h1{
+            font-size: 67px;
+            width:494,28;
+            line-height: 80px;
+        }
+        .noidung > p{
+            font-size: 19px;
+            line-height: 1.47;
+        }
+        .button button{
+            width: 167.66px;
+            height: 48px;
+            border: 2px solid #ECE0CE;
+            padding: 10px 27px;
+            font-size: 17px;
+            line-height: 1.64;
+        }
+        .logo{
+            display:flex;
+            justify-content: space-between;
+            padding: 64px 176px;
+            gap:40px;
+        }
+        .item2{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 64px 168px;
+            gap: 100px;
+        }
+         .item2 > p:first-child{
+            font-size: 11px;
+            letter-spacing: 2px;
+            line-height: 2;
+        }
+        .item2 h1{
+            font-size: 44px;
+            line-height: 1.27;
+        }
+        .item2 > p{
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .next2{
+            display: flex;
+            align-items: center
+        }
+        .item1{
+            display: flex;
+            flex-direction: column;
+            padding: 64px 0;
+        }  
+        .tieude{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 64px;
+        }
+        .tieude > p:first-child{
+            font-size: 11px;
+            letter-spacing: 2px;
+            line-height: 2;
+        }
+        .tieude > p{
+             font-size: 29px;
+             line-height:1,38;
+        }
+        .noidung2{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            height:356px;
+        }
+        .muc2{
+            width: 352px;
+            height: 356px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-align: center;
+        }
+        .muc2 > img{
+            width:64px;
+            height:64px;
+        }
+         .muc2 > p:nth-child(2){
+            font-size: 22px;
+            line-height: 1.45;
+            
+        }
+        .muc2 > p:nth-child(3){
+            font-size:15px;
+            line-height:1.6p;
+        }
+        .main3{
+            display: flex;
+            justify-content: center;
+        }
+        .item2{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 100px;
+        }
+        .noidungitem2{
+           display: flex;
+           flex-direction: column;
+           gap: 30px;
+        }
+        .tieudeitem2{
+           display: flex;
+           flex-direction: column;
+           gap: 16px;
+        }
+        .tieudeitem2 > p{
+           font-size: 11px;
+           letter-spacing: 2px;
+        }
+        .tieudeitem2 h1{
+           font-size: 44px;
+           line-height: 56px;
+        }
+        .duoiitem2{
+           display: flex;
+           flex-direction: column;
+           gap: 22px;
+        }
+        .duoiitem2 > p:first-child{
+           font-size: 16px;
+           line-height: 1.5;
+        }
+        .next2 > p:first-child{
+            size: 17px;
+            line-height:28px;
+            font-weight:bold;
+            text-decoration: underline;
+        }
+        .next2{
+           display: flex;
+           align-items: center;
+           gap: 8px;
+        }
+        .item3{
+        width: 1088px;
+        height: 299px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        background-color: #03363D;
+        padding: 64px;
+        }
+        .item3 > div:nth-child(2){
+           width: 558.06px;
+           display: flex;
+           flex-direction: column;
+           gap: 24px;
+           color: white;
+        }
+       .item3 > div:nth-child(2) > p:first-child{
+            font-size: 21px;
+            line-height: 32px;
+            font-weight: bold;
+        }
+       .item3 > div:nth-child(2) > p:last-child{
+           font-size: 16px;
+           line-height: 24px;
+        }
+       .item3 > div:first-child img{
+           width: 168px;
+           height: 168px;
+           object-fit: cover;
+        }
+       .item3 button{
+           width: 185px;
+           height: 40px;
+           background-color: #ECE0CE;
+        }
+        .item4{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 64px 168px;
+            gap: 100px;
+        }
+        .noidungitem4{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .noidungitem4 h1{
+            font-size: 43px;
+            line-height: 56px;
+        }
+        .noidungitem4 > p:last-of-type{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .noidungitem4 > p:first-child{
+            font-size:12px;
+            line-height: 1,83;
+
+        }
+        .item5{
+           display: flex;
+           flex-direction: column;
+           padding: 64px 176px;
+           gap: 64px;
+        }
+       .tieude2{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 16px;
+        }
+        .tieude2 > p:first-child{
+           font-size: 11px;
+           letter-spacing: 2px;
+           line-height: 22px;
+           font-weight: bold;
+        }
+        .tieude2 > p:last-child{
+           font-size: 43px;
+           line-height: 56px;
+           font-weight: bold;
+        }
+        .noidung3{
+           display: flex;
+           justify-content: space-between;
+           align-items: flex-start;
+           gap: 16px;
+        }
+       .muc3{
+           width: 352px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 16px;
+           text-align: center;
+        }
+        .muc3 > img{
+           width: 64px;
+           height: 64px;
+        }
+        .muc3 > p:nth-child(2){
+           font-size: 22px;
+           line-height: 32px;
+           font-weight: bold;
+        }
+        .muc3 > p:nth-child(3){
+           font-size: 16px;
+           line-height: 24px;
+        }
+        .item6{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           padding: 64px 176px;
+        }
+        .tieude3{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 12px;
+           padding-bottom: 64px;
+        }
+        .tieude3 p:first-child{
+           font-size: 11px;
+           line-height: 22px;
+           letter-spacing: 2px;
+           font-weight: bold;
+        }
+        .tieude3 p:last-child{
+           font-size: 43px;
+           line-height: 56px;
+           font-weight: bold;
+        }
+        .logo2{
+           width: 1088px;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+        }
+        .noidung4{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+           gap: 32px;
+           padding-top: 64px;
+        }
+        .noidung4 > p{
+           font-size: 22px;
+           line-height: 30px;
+        }
+        .muc4{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           gap: 14px;
+           padding: 8px 8px 14px;
+        }
+        .muc4 p:first-child{
+           font-size: 18px;
+           line-height: 28px;
+           font-weight: bold;
+        }
+        .muc4 p:last-child{
+           font-size: 12px;
+           line-height: 18px;
+        }
+        .muc4_1{
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        }
+        .muc4_11{
+           width: 106.66px;
+           height: 90px;
+           display: flex;
+            flex-direction: column;
+           align-items: center;
+           gap: 16px;
+        }
+        .muc4_11 > p:first-child{
+           font-size: 32px;
+           line-height: 40px;
+           font-weight: bold;
+        }
+         .muc4_11 > p:last-child{
+        font-size: 14px;
+        line-height: 100%;
+        }
+        .main7{
+            background-color: #587052 ;
+        }
+        .item7{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 158px 176px;
+           gap: 100px;
+        }
+        .noidung5{
+           width: 552px;
+           height: 128px;
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           gap: 16px;
+           flex-shrink: 0;
+           color: white;
+        }
+       .noidung5 > p{
+          font-size: 43px;
+          line-height: 56px;
+          font-weight: bold;
+        }
+        .anh2{
+          width: 440px;
+          height: 440px;
+        }
+        .anh2 img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 440px;
+       }
+        .chantrang{
+          padding: 64px 176px 40px;
+        }
+       .phandau{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 8px;
+        }
+       .thuonghieu{
+          width: 184px;
+          height: 397px;
+          display: flex;
+          flex-direction: column;
+          gap: 23px;
+        }
+       .thuonghieu img{
+          width: 32px;
+          height: 32px;
+        }
+        .thuonghieu h2{
+          font-size: 22px;
+          line-height: 32px;
+        }
+       .cot{
+         width: 184px;
+         display: flex;
+         flex-direction: column;
+         gap: 24px;
+        }
+       .cot h3{
+          font-size: 11px;
+          line-height: 22px;
+          letter-spacing: 2px;
+        }
+       .cot p{
+          font-size: 12px;
+          line-height: 28px;
+        }
+       .phangiua{
+         display: flex;
+         align-items: center;
+         padding-top: 24px;
+         border-top: 1px solid #ccc;
+        }
+        .dangky{
+          width: 260px;
+          height: 56px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .dangky h2{
+          font-size: 20px;
+          line-height: 32px;
+        }
+        .dangky p{
+          font-size: 12px;
+          line-height: 16px;
+        }
+       .nhapemail{
+         display: flex;
+         width: 440px;
+         height: 48px;
+         gap: 0;
+        }
+       .nhapemail input{
+         width: 310px;
+         height: 48px;
+         padding: 12px;
+       }
+       .nhapemail button{
+         width: 130px;
+         height: 48px;
+         background-color: #03363D;
+         color: white;
+         border: 0;
+       }
+        .mangxahoi{
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding-left: 136px;
+        }
+        .mangxahoi img{
+           width: 32px;
+           height: 32px;
+           object-fit: contain;
+        }
+        .phancuoi{
+           display: flex;
+           gap: 24px;
+           padding-top: 32px;
+        }
+        .phancuoi p{
+        font-size: 11px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+            <div class="noidung">
+                <p>ZENDESK FOR ENTERPRISE</p>
+                <h1>
+                   Transform your<br>
+                   relationships<br>
+                   with customers 
+                </h1>
+                 <p>
+                    Zendesk empowers you to adapt to changing customer<br>
+                    expectations. Align your teams and technology around<br>
+                    what matters most—the customer.
+                 </p>
+                 <div>
+                <div class="button">    
+                <button style="background-color: #ECE0CE;">Contact Sales</button>
+                <button style="background-color: transparent; border: 2px solid #ECE0CE;color:#ECE0CE">View Demo</button>
+                </div>
+            </div>
+            </div>
+            <div class="anh"><img src="Image.png"></div>
+            </div>
+        </header>
+        <section class="menu">
+            <div class="logo">
+                <div><img src="Frame.png" alt="Logo"></div>
+                <div><img src="Frame (1).png" alt="Logo 2"></div>
+                <div><img src="Frame (2).png" alt="Logo 3"></div>
+                <div><img src="Frame (4).png" alt="Logo 4"></div>
+                <div><img src="Frame (5).png" alt="Logo 5"></div>
+                <div><img src="Frame (7).png" alt="Logo 6"></div>
+            </div>
+        </section>
+        <section class="main1">
+            <div class="item1">
+                <div class="tieude">
+                    <p>BUILT FOR THE ENTERPRISE</p>
+                    <p>The future of customer experience</p>
+                </div>
+                <div class="noidung2">
+                    <div class="muc2">
+                        <img src="lg1.png">
+                        <p>Drive better conversations</p>
+                        <p>Offer rich, personalized conversations<br>
+                         on the channels customers choose.<br>
+                         They’ll feel like more than a transaction;<br>
+                         you’ll encourage long-term loyalty.</p>
+                        <div class="next1">
+                            <p>Conversational features</p>
+                            <img src="muioten.png">
+                      </div>
+                    </div>
+                      <div class="muc2">
+                        <img src="lg2.png">
+                        <p>Maximize agent efficiency</p>
+                        <p>
+                           Transform agents from problem<br>
+                           solvers to revenue drivers. With our<br>
+                           all-in-one workspace, they’ll ffocus<br>
+                           less on repetitive tasks and more on<br>
+                           relationship building.
+                        </p>
+                        <div class="next1">
+                            <p>Productivity features</p>
+                            <img src="muioten.png">
+                      </div>
+                    </div>
+                         <div class="muc2">
+                        <img src="lg3.png">
+                        <p>Adapt faster to change</p>
+                        <p>
+                           Keep up with changing customer demands.<br>
+                           Enter new markets and scale even faster<br>
+                           with the open, flexible solutions on our<br>
+                           complete Sunshine platform.
+                        </p>
+                        <div class="next1">
+                            <p>Conversational features</p>
+                            <img src="muioten.png">
+                      </div>
+                </div>
+            </div>
+        </section>
+        <section class="main2">
+            <div class="item2">
+                <div><img src="sodo.png"></div>
+                <div class="noidungitem2">
+                    <div class="tieudeitem2">
+                    <p>ZENDESK SUNSHINE PLATFORM</p>
+                    <h1>
+                      Open, flexible<br>
+                      architecture
+                    </h1>
+                    </div>
+                    <div class="duoiitem2">
+                    <p>
+                       Our library of 1200+ apps and integrations lets you add your <br>
+                       everyday systems with a click, and our comprehensive set of APIs <br>
+                       allows you to extend and customize solutions. When you connect <br>
+                       your tech stack to Zendesk, data is useful and usable.
+                    </p>
+                    <div class="next2">
+                       <p>Explore platform</p>
+                       <img src="muioten.png">
+                    </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+        <section class="main3">
+            <div class="item3">
+                <div><img src="thap.png"></div>
+                <div>
+                    <p>
+                        Evaluate Zendesk ROI
+                    </p>
+                    <p>
+                        Forrester shows the cost and benefits of Zendesk, pointing to an ROI of<br>
+                        286% with payback in less than six months for a composite organization.  
+                    </p>
+                </div>           
+                    <button>See ROI resources</button>
+            </div>
+        </section>
+        <section class="main4">
+            <div class="item4">
+                <div class="noidungitem4"  >
+                    <p>SECURITY AND COMPLIANCE</p>
+                    <h1>
+                      You’re safe with us
+                    </h1>
+                    <p>
+                      Trusted by Fortune 100 companies, our privacy and data protection<br>
+                      program includes a team dedicated to global compliance. We operate<br> 
+                      within all regulatory and industry frameworks—because software is only as<br>
+                      good as its security.
+                    </p>
+                    <div class="next2">
+                       <p>Full compliance details</p>
+                       <img src="muioten.png">
+                    </div>
+                </div>
+                    <div>
+                        <img src="chim.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main5">
+            <div class="item5">
+                <div class="tieude2">
+                <p>
+                    ZENDESK WORKS FOR YOU
+                </p>
+                <p>
+                    Tailored to your needs
+                </p>
+                </div>
+                <div class="noidung3">
+                    <div class="muc3">
+                       <img src="lg4.png">
+                       <p>
+                         Bring your vision to life
+                       </p>
+                       <p>
+                        Partner with our world-class experts to design and implement<br>
+                        Zendesk. Our Professional Services team will give you the<br>
+                        personalized service you need to reduce time-to-value and<br>
+                        transform your service offerings.
+                       </p>
+                    <div class="next2">
+                       <p>Start the partnership</p>
+                       <img src="muioten.png">
+                    </div>
+                </div>
+                <div class="muc3">
+                    <img src="lg5.png">
+                    <p>
+                        Find your industry
+                    </p>
+                    <p>
+                        We know every industry works a little differently. Whether you work<br>
+                        in retail, manufacturing, financial services, or any other sector, our<br>
+                        expertise will help you make the most of Zendesk.
+                    </p>
+                    <div class="next2">
+                       <p>View Zendesk industries</p>
+                       <img src="muioten.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main6">
+            <div class="item6">
+            <div class="tieude3">
+                <p>CUSTOMER STORIES</p>
+                <p>How businesses use Zendesk</p>
+            </div>
+            <div>
+                <div class="logo2">
+                    <img src="tentrai.png">
+                    <img src="lg6.png">
+                    <img src="lg7.png">
+                    <img src="lg8.png">
+                    <img src="lg9.png">
+                    <img src="lg10.png">
+                    <img src="tenphai.png">
+                </div>
+                <div class="noidung4">
+                    <p>
+                        “Time-to-cash absolutely improves with<br>
+                        Zendesk; with faster resolution times, SMC<br>
+                        fulfills and invoices orders more quickly”
+                    </p>
+                     <div class ="muc4">
+                        <p>
+                            Robin Rodriguez
+                        </p>
+                        <p>
+                            Global manager of platform and service delivery
+                        </p>
+                     </div>
+                     <div class="next2">
+                       <p>Read more</p>
+                       <img src="muioten.png">
+                    </div>
+                     <div class="muc4_1">
+                        <div class="muc4_11">
+                            <p>15</p>
+                            <p>
+                               languages<br>
+                               supported
+                            </p>
+                        </div>
+                        <div class="muc4_11">
+                            <p>1,000+</p>
+                            <p>agents</p>
+                        </div>
+                        <div  class="muc4_11">
+                            <p>4</p>
+                            <p>
+                                months time to<br>
+                                implementation
+                            </p>
+                        </div>
+                        <div class="muc4_11">
+                            <p>83</p>
+                            <p>
+                                countries<br>
+                                worldwide
+                            </p>
+                        </div>
+
+                     </div>
+                </div>
+            </div>
+        <div>
+        </section>
+        <section class="main7">
+            <div class="item7">
+                <div class="noidung5">
+                    <p>
+                       Zendesk in action 
+                    </p>
+                    <div class="button">    
+                        <button style="background-color: #ECE0CE;">Request Demo</button>
+                        <button style="background-color: transparent; border: 2px solid #ECE0CE;color:#ECE0CE">Contact Sales</button>
+                    </div>
+                </div>
+                <div class="anh2">
+                    <img src="den.png">
+                </div>
+            </div>
+        </section>
+        <footer class="chantrang">
+    <div class="phandau">
+        <div class="thuonghieu">
+            <img src="Z.png">
+            <h2>
+                Champions<br>
+                of customer<br>
+                service
+            </h2>
+        </div>
+
+        <div class="cot">
+            <h3>OUR PRODUCTS</h3>
+            <p>
+                Zendesk for service<br>
+                Zendesk for sales<br>
+                Sunshine Platform<br>
+                Marketplace<br>
+                Product updates
+            </p>
+        </div>
+        <div class="cot">
+            <h3>TOP FEATURES</h3>
+            <p>
+            Ticketing system<br>
+            Messaging & live chat<br>
+            Help center<br>
+            Voice<br>
+            Community forums<br>
+            Reporting & analytics<br>
+            Answer Bot<br>
+            Customer service software<br>
+            Ticketing system software<br>
+            Live chat software<br>
+            Knowledge base<br>
+            Forum software<br>
+            Help desk software
+            </p>
+        </div>
+        <div class="cot">
+            <h3>RESOURCES</h3>
+            <p>
+             Security<br>
+            Product support<br>
+            Request a demo<br>
+            Blog<br>
+            Training<br>
+            Partners<br>
+            Webinars<br>
+            Customer Stories<br>
+            Services
+            </p>
+        </div>
+        <div class="cot">
+            <h3>COMPANY</h3>
+            <p>
+                 About us<br>
+                 Newsroom<br>
+                 Investors<br>
+                 Events<br>
+                 Careers<br>
+                 Diversity & Inclusion<br>
+                 Sustainability<br>
+                 Contact us<br>
+                 Sitemap<br>
+                 System status<br>
+                 Zendesk Foundation<br>
+                Legal
+            </p>
+        </div>
+        <div class="cot">
+            <h3>FAVORITE THINGS</h3>
+            <p>
+            What is Zendesk<br>
+            Zendesk for Enterprise<br>
+            Zendesk for Small Business<br>
+            Zendesk for Startups<br>
+            Zendesk Benchmark<br>
+            Gartner CRM Magic Quadrant<br>
+            Customer Experience Trends<br>
+            What is CRM?<br>
+            CRM software guide<br>
+            Join our research panel
+            </p>
+        </div>
+    </div>
+    <div class="phangiua">
+        <div class="dangky">
+            <h2>Enter the fold</h2>
+            <p>Subscribe to our newsletter.</p>
+        </div>
+        <div class="nhapemail">
+            <input type="email" placeholder="What's your email?">
+            <button>Subscribe</button>
+        </div>
+        <div class="mangxahoi">
+            <img src="twitter.png">
+            <img src="facebook.png">
+            <img src="linkedin.png">
+            <img src="youtube.png">
+            <img src="instagram.png">
+       </div>
+    </div>
+      <div class="phancuoi">
+         <p>Terms of Use</p>
+         <p>Privacy Notice</p>
+         <p>Cookie Notice</p>
+         <p>©Zendesk 2023</p>
+       </div>
+     </footer>
+    </div>
+</body>
+</html>
